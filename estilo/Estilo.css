@@ -1,0 +1,350 @@
+/*TARJETAS*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Montserrat', sans-serif;
+}
+/*Cards*/
+.container-card{
+width: 80%;
+display: flex;
+max-width: 1100px;
+margin: auto;
+}
+.title-cards{
+width: 100%;
+max-width: 1080px;
+margin: auto;
+padding: 20px;
+margin-top: 20px;
+text-align: center;
+color: #7a7a7a;
+}
+.card{
+width: 100%;
+height: 520px;
+margin: 20px;
+border-radius: 6px;
+overflow: hidden;
+background: url(../img/admin/img2-vertical.jpg) center;
+box-shadow: 5px 8px 12px rgba(185, 181, 181, 0.2);
+transition: all 400ms ease-out;
+cursor: default;
+}
+.card:hover{
+box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+transform: translateY(-3%);
+}
+.card img{
+width: 100%;
+height: 400px;
+background: rgb (255,0,0);
+}
+.card .contenido-card{
+padding: 15px;
+text-align: center;
+line-height: 500px;
+font-size: xx-large;
+}
+.card .contenido-card h3{
+margin-bottom: 15px;
+color: rgb(255, 255, 255);
+}
+.card .contenido-card p{
+line-height: 1.8;
+color: #6a6a6a;
+font-size: 14px;
+margin-bottom: 5px;
+}
+/*
+.card .contenido-card a{
+display: inline-block;
+padding: 10px;
+margin-top: 10px;
+text-decoration: none;
+color: #2fb4cc;
+border: 1px solid #2fb4cc;
+border-radius: 4px;
+transition: all 400ms ease;
+margin-bottom: 5px;
+}
+.card .contenido-card a:hover{
+background: #2fb4cc;
+color: #fff;
+}*/
+@media only screen and (min-width:320px) and (max-width:768px){
+.container-card{
+flex-wrap: wrap;
+}
+.card{
+margin: 15px;
+}
+}
+
+/*FONDO*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat Alternates', sans-serif;
+}
+body{
+	background: rgba(5, 10, 48);
+	background-size: 100vw 100vh;
+	background-repeat: no-repeat;
+}
+.capa{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,0.6);
+	z-index: -1;
+	top: 0;left: 0;
+}
+
+/*Estilos para el encabezado*/
+
+.header{
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	top: 0;left: 0;
+}
+
+.container{
+	width: 70%;
+	/* max-width: 1200px; */
+	margin: auto;
+}
+
+.container .menu{
+	float: right;
+	/* line-height: 100px; */
+}
+.menu1{
+	width: 100%;
+	float: right;
+	position: right;
+}
+
+.container .menu a{
+	display: inline-block;
+	padding: 15px;
+	line-height: normal;
+	text-decoration: none;
+	color: #fff;
+	transition: all 0.3s ease;
+	border-bottom: 2px solid transparent;
+	font-size: 15px;
+	margin-right: 5px;
+}
+
+.menu1 a{
+	margin: 0px 0px 0px 90%;
+	padding: 10px;
+	display: inline-block;
+	line-height: normal;
+	text-decoration: none;
+	color: #fff;
+	transition: all 0.3s ease;
+	border-bottom: 2px solid transparent;
+	font-size: 15px;
+	margin-right: 5px;
+}
+
+.container .menu a:hover{
+	border-bottom: 2px solid rgb(1, 148, 252);
+	padding-bottom: 5px;
+}
+.menu1 a:hover{
+	border-bottom: 2px solid rgb(1, 148, 252);
+	padding-bottom: 5px;
+}
+
+.container .btn-menu, .hamburguesa{
+	float: left;
+	line-height:100px;
+}
+.container .btn-menu label{
+	color: rgb(250, 181, 18);
+	font-size: 25px;
+	cursor: pointer;
+}
+.hamburguesa h1{
+	color: #fff;
+	font-weight: 400;
+	font-size: 22px;
+	margin-left: 10px;
+}
+/*Fin de Estilos para el encabezado*/
+
+/*Menù lateral*/
+#btn-menu{
+	display: none;
+}
+.hamburguesa .logo{
+width: 100px;
+height: 100px;
+border-radius: 50%;
+position: relative;
+top: 2px;
+left: calc(50% - 50px);
+}
+.container-menu{
+	position: absolute;
+	background: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100vh;
+	top: 0;left: 0;
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+	opacity: 1;
+	visibility: visible;
+}
+.cont-menu{
+	width: 100%;
+	max-width: 250px;
+	background: #1c1c1c;
+	height: 100vh;
+	position: relative;
+	transition: all 500ms ease;
+	transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+	transform: translateX(0%);
+}
+.cont-menu nav{
+	transform: translateY(15%);
+}
+.cont-menu nav a{
+	display: block;
+	text-decoration: none;
+	padding: 20px;
+	color: #c7c7c7;
+	border-left: 5px solid transparent;
+	transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+	border-left: 5px solid rgb(41, 215, 243);
+	background: #1f1f1f;
+}
+.cont-menu label{
+	position: absolute;
+	right: 5px;
+	top: 10px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 18px;
+}
+/*Fin de Menù lateral*/
+
+/*Login*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css);
+
+body {
+margin: 0;
+padding: 0;
+/* background-image: url(../img/fondoJuma.jpeg);
+background-size: 100% 100%; */
+background-size: cover;
+font-family: sans-serif;
+height: 100vh;
+	background: center;
+	background-size: 100vh 100vh;
+	background-repeat: no-repeat;
+}
+
+.login-box {
+width: 320px;
+height: 420px;
+background: rgba(5, 10, 48, 0.4);
+color: #fff;
+top: 50%;
+left: 50%;
+position: absolute;
+transform: translate(-50%, -50%);
+box-sizing: border-box;
+padding: 70px 30px;
+border-radius: 20px;
+}
+
+.login-box .avatar {
+width: 100px;
+height: 100px;
+border-radius: 50%;
+position: absolute;
+top: -50px;
+left: calc(50% - 50px);
+}
+
+.login-box h1 {
+margin: 0;
+padding: 0 0 20px;
+text-align: center;
+font-size: 22px;
+}
+
+.login-box label {
+margin: 0;
+padding: 0;
+font-weight: bold;
+display: block;
+}
+
+.login-box input {
+width: 100%;
+margin-bottom: 20px;
+}
+
+.login-box input[type="text"], .login-box input[type="password"] {
+border: none;
+border-bottom: 1px solid #fff;
+background: transparent;
+outline: none;
+height: 40px;
+color: #fff;
+font-size: 16px;
+cursor: text;
+}
+
+.login-box input[type="submit"] {
+border: none;
+outline: none;
+height: 40px;
+background: #b80f22;
+color: #fff;
+font-size: 18px;
+border-radius: 20px;
+}
+
+.login-box input[type="submit"]:hover {
+cursor: pointer;
+background: rgb(250, 181, 18);
+color: #000;
+}
+
+.login-box a {
+text-decoration: none;
+font-size: 12px;
+line-height: 20px;
+color: darkgrey;
+}
+
+.login-box a:hover {
+color: #fff;
+}
+
+.fondo {
+width: 100%;
+background-size: 100% 100%;
+}
+
+/*fin login*/
