@@ -70,7 +70,7 @@ create table rutinas (
 id int unsigned not null auto_increment,
 descripcion varchar (100) NOT NULL,
 nombre varchar (100) NOT NULL,
-barrio_id int unsigned not null,
+tipo_rutina_id int unsigned not null,
 primary key (id),
 foreign key (tipo_rutina_id) references tipos_rutinas(id)
 );
@@ -80,23 +80,25 @@ id int unsigned not null auto_increment,
 dni int unsigned not null unique,
 nombre varchar (100) not null,
 apellido varchar (100) not null,
-direccion_id int unsigned not null auto_increment,
+direccion_id int unsigned not null,
 email varchar (200) unique not null,
 fecha_nac varchar (10),
+telefono varchar (20),
 primary key (id),
 foreign key (direccion_id) references direcciones(id)
 );
 
 create table clientes (
 id int unsigned not null auto_increment,
+persona_id int unsigned not null,
 primary key (id),
 foreign key (persona_id) references personas(id)
 );
 
 create table personal (
 id int unsigned not null auto_increment,
-persona_id int unsigned not null auto_increment,
-tipo_personal_id int unsigned not null auto_increment,
+persona_id int unsigned not null,
+tipo_personal_id int unsigned not null,
 primary key (id),
 foreign key (persona_id) references personas(id),
 foreign key (tipo_personal_id) references tipos_personal(id)
@@ -108,3 +110,6 @@ fecha varchar (10),
 primary key (id),
 foreign key (personal_id) references personal(id)
 );
+
+use jumagim
+
