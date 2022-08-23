@@ -1,0 +1,110 @@
+create database jumagim;
+use jumagim;
+create table if not exists ciudades (
+id int unsigned not null auto_increment,
+nombre varchar (50) NOT NULL,
+primary key (id)
+);
+
+create table tipos_padecimientos (
+id int unsigned not null auto_increment,
+padecimiento varchar (100) NOT NULL,
+primary key (id)
+);
+
+create table medicos (
+id int unsigned not null auto_increment,
+nombre varchar (50) NOT NULL,
+apellido varchar (50) NOT NULL,
+primary key (id)
+);
+
+create table tipos_rutinas (
+id int unsigned not null auto_increment,
+tipo varchar (100) NOT NULL,
+primary key (id)
+);
+
+create table meses (
+id int unsigned not null auto_increment,
+mes varchar (50) NOT NULL,
+abreviado varchar (100) NOT NULL,
+primary key (id)
+);
+
+create table if not exists tipos_personal (
+id int unsigned not null auto_increment,
+nombre varchar (50) NOT NULL,
+primary key (id)
+);
+
+create table if not exists tipos_planes (
+id int unsigned not null auto_increment,
+nombre varchar (50) NOT NULL,
+primary key (id)
+);
+
+create table if not exists tipos_egresos (
+id int unsigned not null auto_increment,
+nombre varchar (50) NOT NULL,
+primary key (id)
+);
+
+create table barrios (
+id int unsigned not null auto_increment,
+nombre varchar (100) NOT NULL,
+ciudad_id int unsigned not null,
+primary key (id),
+foreign key (ciudad_id) references ciudades(id)
+);
+
+create table direcciones (
+id int unsigned not null auto_increment,
+nombre varchar (100) NOT NULL,
+barrio_id int unsigned not null,
+primary key (id),
+foreign key (barrio_id) references barrios(id)
+);
+
+create table rutinas (
+id int unsigned not null auto_increment,
+descripcion varchar (100) NOT NULL,
+nombre varchar (100) NOT NULL,
+barrio_id int unsigned not null,
+primary key (id),
+foreign key (tipo_rutina_id) references tipos_rutinas(id)
+);
+
+create table personas (
+id int unsigned not null auto_increment,
+dni int unsigned not null unique,
+nombre varchar (100) not null,
+apellido varchar (100) not null,
+direccion_id int unsigned not null auto_increment,
+email varchar (200) unique not null,
+fecha_nac varchar (10),
+primary key (id),
+foreign key (direccion_id) references direcciones(id)
+);
+
+create table clientes (
+id int unsigned not null auto_increment,
+primary key (id),
+foreign key (persona_id) references personas(id)
+);
+
+create table personal (
+id int unsigned not null auto_increment,
+persona_id int unsigned not null auto_increment,
+tipo_personal_id int unsigned not null auto_increment,
+primary key (id),
+foreign key (persona_id) references personas(id),
+foreign key (tipo_personal_id) references tipos_personal(id)
+);
+
+create table asistencias_docentes (
+id int unsigned not null auto_increment,
+fecha varchar (10),
+primary key (id),
+foreign key (personal_id) references personal(id)
+);
