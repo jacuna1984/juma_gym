@@ -250,23 +250,23 @@ left: calc(50% - 50px);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css);
 
 body {
-margin: 0;
-padding: 0;
-/* background-image: url(../img/fondoJuma.jpeg);
-background-size: 100% 100%; */
-background-size: cover;
-font-family: sans-serif;
-height: 100vh;
-	background: center;
-	background-size: 100vh 100vh;
-	background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;
+	/* background-image: url(../img/fondoJuma.jpeg);
+	background-size: 100% 100%; */
+	background-size: cover;
+	font-family: sans-serif;
+	height: 100vh;
+		background: center;
+		background-size: 100vh 100vh;
+		background-repeat: no-repeat;
 }
 
 .login-box {
 width: 320px;
 height: 420px;
-background: rgba(5, 10, 48, 0.4);
-color: #fff;
+background: rgba(5, 10, 48, 0.8);
+color: rgb(226, 197, 30);
 top: 50%;
 left: 50%;
 position: absolute;
@@ -348,3 +348,7 @@ background-size: 100% 100%;
 }
 
 /*fin login*/
+
+@media(max-width: 768px) {
+	
+}
