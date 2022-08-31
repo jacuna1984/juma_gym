@@ -1,5 +1,17 @@
 create database jumagim;
 use jumagim;
+
+create table personas (
+id int unsigned not null auto_increment,
+dni int unsigned not null unique,
+nombre varchar (100) not null,
+apellido varchar (100) not null,
+email varchar (200) unique not null,
+fecha_nac varchar (10),
+telefono varchar (20),
+primary key (id)
+);
+
 create table if not exists ciudades (
 id int unsigned not null auto_increment,
 nombre varchar (50) NOT NULL,
@@ -50,6 +62,8 @@ nombre varchar (50) NOT NULL,
 primary key (id)
 );
 
+------------------------------------0--------------------------------------
+
 create table barrios (
 id int unsigned not null auto_increment,
 nombre varchar (100) NOT NULL,
@@ -61,9 +75,12 @@ foreign key (ciudad_id) references ciudades(id)
 create table direcciones (
 id int unsigned not null auto_increment,
 nombre varchar (100) NOT NULL,
+numero tinyint,
 barrio_id int unsigned not null,
+personas_id int unsigned not null,
 primary key (id),
-foreign key (barrio_id) references barrios(id)
+foreign key (barrio_id) references barrios(id),
+foreign key (persona_id) references personas(id)
 );
 
 create table rutinas (
@@ -73,19 +90,6 @@ nombre varchar (100) NOT NULL,
 tipo_rutina_id int unsigned not null,
 primary key (id),
 foreign key (tipo_rutina_id) references tipos_rutinas(id)
-);
-
-create table personas (
-id int unsigned not null auto_increment,
-dni int unsigned not null unique,
-nombre varchar (100) not null,
-apellido varchar (100) not null,
-direccion_id int unsigned not null,
-email varchar (200) unique not null,
-fecha_nac varchar (10),
-telefono varchar (20),
-primary key (id),
-foreign key (direccion_id) references direcciones(id)
 );
 
 create table clientes (
@@ -111,5 +115,10 @@ primary key (id),
 foreign key (personal_id) references personal(id)
 );
 
-use jumagim
+use jumagim;
 
+select p.id, p.nombre, d.nombre as direccion from personas p left join direcciones d on p.id = direccion_id; (equivocado)
+
+select d.nombre as direccion, p.nombre, p.dni from direcciones d left join personas p on d.id = p.id; (equivocado)
+
+select d.id, d.nombre as direccion, p.nombre from direcciones d left join personas p on p.direccion_id = d.id;
