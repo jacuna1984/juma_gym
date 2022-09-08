@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/estilo/bootstrap-5.2.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <title>Personas</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="titulo">JUMA GYM</h1>
+    </header>
+
+    <div class="formusr">
+        <form action="./crear_persona.php" class="row g-9" method="post">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="dni" class="form-label">DNI</label>
+                        <input type="text" id="dni" name="dni" class="form-control" size="60em" placeholder="Tipear su DNI">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="inputPassword5" class="form-label">Contraseña</label>
+                    <input type="password" id="inputPassword5" class="form-control" name="password" size="60em" placeholder="Tipear una contraseña" aria-describedby="passwordHelpBlock">
+                        <div id="passwordHelpBlock" class="form-text">
+                            Tu constraseña deberá contenter entre 8-20 carácteres de longitud, debe contener <br> también letras y números, no deben contener espacios, carácteres especiales o emoticones.
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" size="60em" placeholder="Tipear su nombre">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="apellido" class="form-label">Apellido</label>
+                        <input type="text" id="apellido" name="apellido" class="form-control" size="60em" placeholder="Tipear su apellido">            
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" id="email" class="form-control" size="60em" placeholder="Tipear su correo electrónico">                
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="direccion" class="form-label">Dirección</label>
+                        <input type="text" id="direccion" class="form-control" size="60em" placeholder="Tipear su domicilio">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="telefono" class="form-label">Telefono</label>
+                        <input type="text" id="telefono" class="form-control" size="60em" placeholder="Tipear su telefono">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="fechanacimiento" class="form-label">Fecha de nacimiento</label>
+                        <input type="date" id="nacimiento" class="form-control" size="60em" placeholder="Tipear su fecha de nacimiento">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="provincia" class="form-label">Provincia</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Seleccione la Provincia</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="ciudad" class="form-label">Ciudad</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Seleccione la ciudad</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+            <div class="form-group">
+                <label for="tipo_persona" class="form-label">¿Estudiante - Profesor - Admin?</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>¿es Profesor o Cliente o Admin?</option>
+                    <option value="1">Cliente</option>
+                    <option value="2">Profesor</option>
+                    <option value="3">Admin</option>
+                </select>
+            </div>
+            </div>
+            <div class="col-md-6">
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary"> Enviar </button>
+            </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

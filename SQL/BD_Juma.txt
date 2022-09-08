@@ -80,7 +80,7 @@ barrio_id int unsigned not null,
 personas_id int unsigned not null,
 primary key (id),
 foreign key (barrio_id) references barrios(id),
-foreign key (persona_id) references personas(id)
+foreign key (personas_id) references personas(id)
 );
 
 create table rutinas (
@@ -111,6 +111,7 @@ foreign key (tipo_personal_id) references tipos_personal(id)
 create table asistencias_docentes (
 id int unsigned not null auto_increment,
 fecha varchar (10),
+personal_id int unsigned not null,
 primary key (id),
 foreign key (personal_id) references personal(id)
 );
