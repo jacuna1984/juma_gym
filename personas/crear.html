@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/estilo/bootstrap-5.2.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Nueva Persona</title>
+</head>
+
+<body>
+
+    <div class="formusr">
+        <form action="crear_personas.php" method="post">
+            <div class="form-group">
+                <label for="dni" class="form-label">DNI</label>
+                    <input type="number" id="dni" class="form-control" 
+                    size="60em" placeholder="Tipear su DNI" name="dni">
+                    
+                <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" id="nombre" class="form-control" 
+                    size="60em" placeholder="Tipear su nombre" name="nombre">
+                    
+                <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" id="apellido" class="form-control" 
+                    size="60em" placeholder="Tipear su apellido" name="apellido">
+                    
+                <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" id="email" class="form-control" 
+                    size="60em" placeholder="Tipear su correo electrónico" name="email">
+                    
+                <label for="telefono" class="form-label">Telefono</label>
+                    <input type="text" id="telefono"  class="form-control" 
+                    size="60em" placeholder="Tipear su telefono" name="telefono">
+                    
+                <label for="fechanacimiento" class="form-label">Fecha de nacimiento</label>
+                    <input type="date" id="nacimiento"  class="form-control" 
+                    size="60em" placeholder="Tipear su fecha de nacimiento" name="fechadenacimiento">
+                    
+                <button type="submit" class="btn btn-primary" value="Enviar" name="registro">
+                    Enviar</button>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
