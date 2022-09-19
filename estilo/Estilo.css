@@ -1,3 +1,7 @@
+body{
+	background-color: navy;
+}
+
 /*TARJETAS*/
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
@@ -247,7 +251,7 @@ left: calc(50% - 50px);
 /*Fin de Menù lateral*/
 
 /*Login*/
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css);
+/*@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css);*/
 
 body {
 	margin: 0;
@@ -343,11 +347,74 @@ color: #fff;
 }
 
 .fondo {
-width: 100%;
-background-size: 100% 100%;
+	width: 100%;
+	background-size: 100% 100%;
 }
 
 /*fin login*/
+
+/*reLogin*/
+
+.imgFondo{
+	/* opacity: 0.7; */
+	border-radius: 10px 0 0 10px;
+
+} 
+
+.div-img-fondo{
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	position: fixed;
+	margin: auto;
+	width: 50%;
+	height: 70%;
+	border-radius: 10px;
+	box-shadow: 9px 8px 12px black;
+	display: flex;
+	gap: 20px;
+}
+
+.titulo{
+	padding: 15px;
+	font-weight: bold;
+	margin: 10px;
+	border-radius: 10px;
+	text-align: center;	
+}
+
+input[type="text"], 
+input[type="email"]{
+	padding: 8px;
+	border: none;
+	border-bottom: 1px solid black;
+	margin: 10px;
+}
+
+input[type="submit"]{
+	margin-left: 3em;
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	color:rgb(255, 255, 255);
+	font-weight: bold;
+	background-color: rgb(25, 41, 25);
+	cursor: pointer;
+}
+
+input[type="submit"]:hover{
+	color:rgb(25, 41, 25);
+	background-color:rgb(255, 255, 255);
+	transition: 1.5s;
+}
+
+.volver{
+	color: red;
+	margin-left: 3em;
+	margin-top: 3em;
+}
+
 
 @media(max-width: 768px) {
 	
