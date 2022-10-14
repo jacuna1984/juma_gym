@@ -6,3 +6,30 @@
 .name1{
     text-align: center;
 }
+
+body{
+    background-color: rgb(5, 10, 48);
+}
+
+.form-control{
+    width: 20%;
+    margin: 5px;
+    
+}
+
+.form-label{
+    font-weight: bold;
+    color: white;
+}
+
+.form-text{
+    color: white;
+}
+
+.form-select{
+    width: 20%;
+}
+.form-group{
+    margin: 1em;
+
+}

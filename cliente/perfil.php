@@ -1,10 +1,11 @@
 <?php
-require "../personas/conexion.php";
+require "../settings/conexion.php";
 $enlace = conectabd();
 
 $idCliente = $_GET['id'];
 $sql = "SELECT 
-        personas.id, 
+        personas.id,
+        personas.dni,
         personas.nombre, 
         personas.apellido, 
         personas.email, 
@@ -67,7 +68,7 @@ $sql = "SELECT
         <a href="#" class="card-link">Card link</a>
         <a href="#" class="card-link">Another link</a>
     </div>
-    <a class="btn btn-primary" href="/pantalla.html" role="button" name="main">
+    <a class="btn btn-primary" href="../index.html" role="button" name="main">
                     Regresar a Principal</a>
 </div>
 </body>
