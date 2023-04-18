@@ -1,277 +1,155 @@
 body{
-	background-color: navy;
-	margin: 0;
-	padding: 0;
-	background-size: cover;
-	font-family: sans-serif;
-	background: center;
-	background-size: 100vh 100vh;
-	background-repeat: no-repeat;
+	background-color: #050A30;
 }
 
-/*TARJETAS*/
+/*Nav-Var*/
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Montserrat', sans-serif;
-}
-
-/*Cards*/
-
-.container-card{
-	width: 80%;
-	display: flex;
-	max-width: 1100px;
-	margin: auto;
-}
-
-.title-cards{
-	width: 100%;
-	max-width: 1080px;
-	margin: auto;
-	padding: 20px;
-	margin-top: 20px;
-	text-align: center;
-	color: #7a7a7a;
-}
-
-.card{
-	width: 100%;
-	height: 520px;
-	margin: 20px;
-	border-radius: 6px;
-	overflow: hidden;
-	background: url(../img/admin/img2-vertical.jpg) center;
-	box-shadow: 5px 8px 12px rgba(185, 181, 181, 0.2);
-	transition: all 400ms ease-out;
-	cursor: default;
-}
-
-.card:hover{
-	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
-	transform: translateY(-3%);
-}
-
-.card img{
-	width: 100%;
-	height: 400px;
-	background: rgb (255,0,0);
-}
-
-.card .contenido-card{
-	padding: 15px;
-	text-align: center;
-	line-height: 500px;
-	font-size: xx-large;
-}
-
-.card .contenido-card h3{
-	margin-bottom: 15px;
-	color: rgb(255, 255, 255);
-}
-
-.card .contenido-card p{
-	line-height: 1.8;
-	color: #6a6a6a;
-	font-size: 14px;
-	margin-bottom: 5px;
-}
-
-@media only screen and (min-width:320px) and (max-width:768px){
-	.container-card{
-	flex-wrap: wrap;
-	}
-}
-
-.card{
-margin: 15px;
-}
-
-/*FONDO*/
-
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Montserrat Alternates', sans-serif;
-}
-
-.capa{
-	position: fixed;
-	width: 100%;
-	height: 100vh;
-	background: rgba(0,0,0,0.6);
-	z-index: -1;
-	top: 0;left: 0;
-}
-
-/*Estilos para el encabezado*/
-
-.header{
-	width: 100%;
-	height: 100px;
-	position: fixed;
-	top: 0;left: 0;
-}
-
-.container{
-	width: 70%;
-	margin: auto;
-}
-
-.container .menu{
-	float: right;
-}
-
-.menu1{
-	width: 100%;
-	float: right;
-	position: right;
-}
-
-.container .menu a{
-	display: inline-block;
-	padding: 15px;
-	line-height: normal;
-	text-decoration: none;
-	color: #fff;
-	transition: all 0.3s ease;
-	border-bottom: 2px solid transparent;
-	font-size: 15px;
-	margin-right: 5px;
-}
-
-.menu1 a{
-	margin: 0px 0px 0px 90%;
-	padding: 10px;
-	display: inline-block;
-	line-height: normal;
-	text-decoration: none;
-	color: #fff;
-	transition: all 0.3s ease;
-	border-bottom: 2px solid transparent;
-	font-size: 15px;
-	margin-right: 5px;
-}
-
-.container .menu a:hover{
-	border-bottom: 2px solid rgb(1, 148, 252);
-	padding-bottom: 5px;
-}
-
-.menu1 a:hover{
-	border-bottom: 2px solid rgb(1, 148, 252);
-	padding-bottom: 5px;
-}
-
-.container .btn-menu, .hamburguesa{
+.nav-bar{
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	float: left;
-	line-height:100px;
 }
 
-.container .btn-menu label{
-	color: rgb(250, 181, 18);
-	font-size: 25px;
-	cursor: pointer;
+/* .nav-item{
+	padding: 5px 10px 30px 0;
+} */
+
+.nav-link{
+	color: #050A30;
+	font-size: x-large;
+	font-weight: bolder;
+	/* -webkit-text-stroke: 0.5px #000; */
 }
 
-.hamburguesa h1{
-	color: #fff;
-	font-weight: 400;
-	font-size: 22px;
-	margin-left: 10px;
+/*fin de nav-var*/
+
+
+/*img-login*/
+
+.img-login{
+	position: absolute;
+	left: 10%;
+	top: 15%;
+	width: 35%;
+	text-align: center;
 }
-/*Fin de Estilos para el encabezado*/
 
-/*Menù lateral*/
+/*fin img-login*/
 
-#btn-menu{
-	display: none;
+/*Login*/
+
+.asistencia-box {
+	width: 320px;
+	height: 320px;
+	/* background: rgba(151, 151, 240, 0.05); */
+	background: rgba(255, 255, 255, 0.132);
+	color: rgb(226, 197, 30);
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(20%, -40%);
+	box-sizing: border-box;
+	padding: 70px 30px;
+	border-radius: 20px;
 }
 
-.hamburguesa .logo{
+.asistencia-box .avatar {
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
-	position: relative;
-	top: 2px;
+	position: absolute;
+	top: -50px;
 	left: calc(50% - 50px);
 }
 
-.container-menu{
-	position: absolute;
-	background: rgba(0,0,0,0.5);
-	width: 100%;
-	height: 100vh;
-	top: 0;left: 0;
-	transition: all 500ms ease;
-	opacity: 0;
-	visibility: hidden;
+.asistencia-box h1 {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: center;
+	font-size: 22px;
 }
 
-#btn-menu:checked ~ .container-menu{
-	opacity: 1;
-	visibility: visible;
-}
-
-.cont-menu{
-	width: 100%;
-	max-width: 250px;
-	background: #1c1c1c;
-	height: 100vh;
-	position: relative;
-	transition: all 500ms ease;
-	transform: translateX(-100%);
-}
-
-#btn-menu:checked ~ .container-menu .cont-menu{
-	transform: translateX(0%);
-}
-
-.cont-menu nav{
-	transform: translateY(15%);
-}
-
-.cont-menu nav a{
+.asistencia-box label {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
 	display: block;
-	text-decoration: none;
-	padding: 20px;
-	color: #c7c7c7;
-	border-left: 5px solid transparent;
-	transition: all 400ms ease;
 }
 
-.cont-menu nav a:hover{
-	border-left: 5px solid rgb(41, 215, 243);
-	background: #1f1f1f;
+.asistencia-box input {
+	width: 100%;
+	margin-bottom: 20px;
 }
 
-.cont-menu label{
-	position: absolute;
-	right: 5px;
-	top: 10px;
+.asistencia-box input[type="text"], .asistencia-box input[type="password"] {
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
 	color: #fff;
-	cursor: pointer;
-	font-size: 18px;
+	font-size: 16px;
+	cursor: text;
 }
 
-/*Fin de Menù lateral*/
+.asistencia-box input[type="submit"] {
+	margin: auto;
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #b80f22;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+
+.asistencia-box input[type="submit"]:hover {
+	cursor: pointer;
+	background: #0094FE;
+	color: #000;
+}
+
+.asistencia-box a {
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 20px;
+	color: darkgrey;
+	align-items: center;
+}
+
+.asistencia-box a:hover {
+	color: #fff;
+}
+
+#btn-contraseña{
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	object-position: center;
+}
+
+/*fin login*/
+
+/*index-fondojuma*/
+
+.fondo-juma{
+	position: absolute;
+	left: 10%;
+	top: 15%;
+	width: 35%;
+	transform: translate(120%, 0);
+}
 
 /*Login*/
 
 .login-box {
 	width: 320px;
-	height: 420px;
-	background: rgba(5, 10, 48, 0.8);
+	height: 435px;
+	/* background: rgba(151, 151, 240, 0.05); */
 	color: rgb(226, 197, 30);
 	top: 50%;
 	left: 50%;
 	position: absolute;
-	transform: translate(-50%, -50%);
+	transform: translate(-150%, -35%);
 	box-sizing: border-box;
 	padding: 70px 30px;
 	border-radius: 20px;
@@ -287,6 +165,7 @@ margin: 15px;
 }
 
 .login-box h1 {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	margin: 0;
 	padding: 0 0 20px;
 	text-align: center;
@@ -294,6 +173,7 @@ margin: 15px;
 }
 
 .login-box label {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	margin: 0;
 	padding: 0;
 	font-weight: bold;
@@ -329,7 +209,7 @@ margin: 15px;
 
 .login-box input[type="submit"]:hover {
 	cursor: pointer;
-	background: rgb(250, 181, 18);
+	background: #0094FE;
 	color: #000;
 }
 
@@ -345,75 +225,12 @@ margin: 15px;
 	color: #fff;
 }
 
-.fondo {
-	width: 100%;
-	background-size: 100% 100%;
-}
-
 #btn-contraseña{
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	object-position: center;
 }
 
 /*fin login*/
 
-/*reLogin*/
 
-.imgFondo{
-	/* opacity: 0.7; */
-	border-radius: 10px 0 0 10px;
 
-} 
-
-.div-img-fondo{
-	left: 0;
-	right: 0;
-	bottom: 0;
-	top: 0;
-	position: fixed;
-	margin: auto;
-	width: 50%;
-	height: 70%;
-	border-radius: 10px;
-	box-shadow: 9px 8px 12px black;
-	display: flex;
-	gap: 20px;
-}
-
-.titulo{
-	padding: 15px;
-	font-weight: bold;
-	margin: 10px;
-	border-radius: 10px;
-	text-align: center;	
-}
-
-input[type="text"], 
-input[type="email"]{
-	padding: 8px;
-	border: none;
-	border-bottom: 1px solid black;
-	margin: 10px;
-}
-
-input[type="submit"]{
-	margin-left: 3em;
-	padding: 10px;
-	border-radius: 5px;
-	border: none;
-	color:rgb(255, 255, 255);
-	font-weight: bold;
-	background-color: rgb(25, 41, 25);
-	cursor: pointer;
-}
-
-input[type="submit"]:hover{
-	color:rgb(25, 41, 25);
-	background-color:rgb(255, 255, 255);
-	transition: 1.5s;
-}
-
-.volver{
-	color: red;
-	margin-left: 3em;
-	margin-top: 3em;
-}

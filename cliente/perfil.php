@@ -6,10 +6,10 @@ $idCliente = $_GET['id'];
 $sql = "SELECT 
         personas.id,
         personas.dni,
-        personas.nombre, 
-        personas.apellido, 
-        personas.email, 
-        personas.fecha_nac, 
+        personas.nombre,
+        personas.apellido,
+        personas.email,
+        personas.fecha_nac,
         personas.telefono,
         clientes.persona_id,
         clientes.id
@@ -68,8 +68,10 @@ $sql = "SELECT
         <a href="#" class="card-link">Card link</a>
         <a href="#" class="card-link">Another link</a>
     </div>
-    <a class="btn btn-primary" href="../index.html" role="button" name="main">
-                    Regresar a Principal</a>
+    <div class="logout">
+        <a class="btn btn-primary" href="../auth/logout.php" name="logout">
+                    Cerrar Sesión</a>
+    </div>
 </div>
 </body>
 </html>

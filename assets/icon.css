@@ -1,0 +1,6 @@
+.icon{
+    height: 2rem;
+    width: 2rem;
+    fill: white;
+    background: url("./icon/check-to-slot-solid.svg");
+}
