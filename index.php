@@ -25,11 +25,11 @@
     </div>
         <div class="asistencia-box">
             <h1>ASISTENCIAS</h1>
-            <form>
+            <form method="post" action="../auth/AsistenciaController.php">
                 <label for="username">DNI</label>
-                <input type="text" placeholder="Tipee su DNI">                
+                <input type="text" name="dni" placeholder="Tipee su DNI">                
                 <input type="submit" value="Aceptar">                
-            </form>
+            </method=>
         </div>    
 </body>
 </html>
